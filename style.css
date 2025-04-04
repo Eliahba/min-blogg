@@ -1,0 +1,107 @@
+/* 🎨 LAYOUT: Standardutseende */
+body {
+  font-family: system-ui, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+  color: #222;
+  position: relative;
+  min-height: 100vh;
+  font-size: 1rem;
+}
+
+/* 🎨 LAYOUT: App-boks midtstilt */
+#app {
+  width: 95%;
+  max-width: 600px;
+  margin: 2rem auto;
+  background: white;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 0 12px rgba(0,0,0,0.1);
+}
+
+/* 🎨 TYPOGRAFI: Etiketter og overskrifter */
+label, h2 {
+  display: block;
+  margin-top: 1rem;
+  font-weight: bold;
+}
+
+/* 🎨 FELT: Skjemafelt og knapper */
+input, textarea, button {
+  width: 100%;
+  padding: 0.75rem;
+  margin-top: 0.5rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  min-height: 44px;
+}
+
+/* 🎨 KNAPP: Normal stil */
+button {
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  margin-top: 1rem;
+}
+
+/* 🎨 KNAPP: Hover-effekt */
+button:hover {
+  background-color: #0056b3;
+  cursor: pointer;
+}
+
+/* ♿ TASTATUR: Fokus synlighet */
+button:focus, input:focus, textarea:focus {
+  outline: 3px solid #0056b3;
+  outline-offset: 2px;
+}
+
+/* 📢 STATUS: Info-boks */
+.statusbox {
+  margin-top: 1rem;
+  padding: 1rem;
+  background: #eef;
+  border: 1px solid #88f;
+  border-radius: 5px;
+}
+
+/* 🔓 KNAPP: Logg ut */
+.logout-btn {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  background-color: #dc3545;
+  color: white;
+  padding: 0.6rem 1rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  transition: background-color 0.2s ease;
+  width: auto;
+}
+
+.logout-btn:hover {
+  background-color: #c82333;
+  cursor: pointer;
+}
+
+/* ♿ TASTATUR: Skip-lenke for skjermlesere */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: #000;
+  color: #fff;
+  padding: 8px;
+  z-index: 1000;
+}
+
+.skip-link:focus {
+  top: 10px;
+}
