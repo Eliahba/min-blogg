@@ -3,7 +3,7 @@ function setStatus(msg) {
   const statusDiv = document.getElementById("status");
   if (statusDiv) {
     statusDiv.textContent = msg;
-    statusDiv.setAttribute("aria-live", "polite");
+    statusDiv.setAttribute("aria-live", "polite"); // Gjør status tilgjengelig for skjermlesere
   }
 }
 
@@ -21,7 +21,7 @@ async function login() {
 
     const data = await res.json();
     if (data.success) {
-      window.location.href = "innlegg.php";
+      window.location.href = "innlegg.php"; // Hvis innlogging er vellykket, send til innleggssiden
     } else {
       setStatus(data.message || "Feil brukernavn eller passord");
     }
@@ -120,7 +120,7 @@ async function logout() {
 
     const data = await res.json();
     if (data.success) {
-      window.location.href = "index.html";
+      window.location.href = "index.html"; // Send brukeren til index.html etter utlogging
     }
   } catch (e) {
     console.error("Feil ved logout:", e);
@@ -129,5 +129,5 @@ async function logout() {
 }
 
 if (window.location.pathname.includes("innlegg")) {
-  window.onload = loadPosts;
+  window.onload = loadPosts; // Last innlegg når innlegg-siden lastes
 }

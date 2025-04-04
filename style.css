@@ -1,107 +1,124 @@
-/* 🎨 LAYOUT: Standardutseende */
+/* Generell styling for hele siden */
 body {
-  font-family: system-ui, sans-serif;
-  background-color: #f4f4f4;
-  margin: 0;
-  padding: 0;
-  color: #222;
-  position: relative;
-  min-height: 100vh;
-  font-size: 1rem;
+  font-family: system-ui, sans-serif; /* Definerer standard skrifttype */
+  background-color: #f4f4f4; /* Lys bakgrunn */
+  margin: 0; /* Fjern standardmarger */
+  padding: 0; /* Fjern standardpadding */
+  color: #222; /* Mørk tekst for kontrast */
 }
 
-/* 🎨 LAYOUT: App-boks midtstilt */
+/* Styling for hovedinnholdet */
 #app {
-  width: 95%;
-  max-width: 600px;
-  margin: 2rem auto;
-  background: white;
-  padding: 1.5rem;
-  border-radius: 10px;
-  box-shadow: 0 0 12px rgba(0,0,0,0.1);
+  width: 90%; /* Responsiv bredde */
+  max-width: 800px; /* Maks bredde for lesbarhet */
+  margin: 2rem auto; /* Sentrert med toppmargin */
+  background: white; /* Hvit bakgrunn */
+  padding: 1.5rem; /* Indre marger */
+  border-radius: 10px; /* Runde hjørner */
+  box-shadow: 0 0 12px rgba(0,0,0,0.1); /* Myk skygge */
 }
 
-/* 🎨 TYPOGRAFI: Etiketter og overskrifter */
+/* Styling for overskrifter */
+h1, h2 {
+  color: #333; /* Mørk farge for overskrifter */
+}
+
+/* Styling for lister */
+ul {
+  list-style-type: disc; /* Punktliste */
+  margin-left: 20px; /* Indre margin for listen */
+}
+
+/* Styling for lenker */
+a {
+  text-decoration: none; /* Fjern understrek */
+  color: #007BFF; /* Blå farge */
+}
+
+a:hover {
+  color: #0056b3; /* Mørkere blå ved hover */
+}
+
+/* Footer-styling */
+footer {
+  margin-top: 2rem;
+  font-size: 0.9rem;
+  color: #777; /* Lys grå farge for footer-tekst */
+}
+
+/* Styling for skjema og inputfelter */
 label, h2 {
-  display: block;
-  margin-top: 1rem;
-  font-weight: bold;
+  display: block; /* Egne linjer for etiketter og overskrifter */
+  margin-top: 1rem; /* Litt toppmarg */
+  font-weight: bold; /* Fet skrift for etiketter */
 }
 
-/* 🎨 FELT: Skjemafelt og knapper */
 input, textarea, button {
-  width: 100%;
-  padding: 0.75rem;
-  margin-top: 0.5rem;
-  border-radius: 5px;
-  border: 1px solid #ccc;
-  font-size: 1rem;
-  min-height: 44px;
+  width: 100%; /* Full bredde på inputfelt og knapper */
+  padding: 0.75rem; /* Innvendig padding */
+  margin-top: 0.5rem; /* Litt mellomrom */
+  border-radius: 5px; /* Runde hjørner */
+  border: 1px solid #ccc; /* Grå kantlinje */
+  font-size: 1rem; /* God lesbarhet */
 }
 
-/* 🎨 KNAPP: Normal stil */
+/* Knappspesifikk styling */
 button {
-  background-color: #007BFF;
-  color: white;
-  border: none;
-  margin-top: 1rem;
+  background-color: #007BFF; /* Blå bakgrunn */
+  color: white; /* Hvit tekst */
+  border: none; /* Fjern kantlinje */
+  margin-top: 1rem; /* Litt margin over knappen */
 }
 
-/* 🎨 KNAPP: Hover-effekt */
 button:hover {
-  background-color: #0056b3;
-  cursor: pointer;
+  background-color: #0056b3; /* Mørkere blå ved hover */
+  cursor: pointer; /* Håndpeker ved hover */
 }
 
-/* ♿ TASTATUR: Fokus synlighet */
-button:focus, input:focus, textarea:focus {
-  outline: 3px solid #0056b3;
-  outline-offset: 2px;
-}
-
-/* 📢 STATUS: Info-boks */
+/* Spesifikk styling for statusmeldinger */
 .statusbox {
   margin-top: 1rem;
   padding: 1rem;
-  background: #eef;
-  border: 1px solid #88f;
-  border-radius: 5px;
+  background: #eef; /* Lys blå bakgrunn */
+  border: 1px solid #88f; /* Blå kantlinje */
+  border-radius: 5px; /* Runde hjørner */
 }
 
-/* 🔓 KNAPP: Logg ut */
-.logout-btn {
-  position: fixed;
-  top: 1rem;
-  right: 1rem;
-  background-color: #dc3545;
+/* Styling for skjult tekst som skjermlesere kan lese */
+.sr-only {
+  position: absolute; /* Flytt utenfor skjermen */
+  left: -9999px; /* Skjul visuelt */
+  top: auto;
+  width: 1px; /* Minimalt skjult område */
+  height: 1px;
+  overflow: hidden; /* Skjult, men tilgjengelig for skjermleser */
+}
+
+/* Styling for knappene på forklaringssiden */
+button {
+  background-color: #007BFF;
   color: white;
-  padding: 0.6rem 1rem;
+  padding: 10px;
+  border-radius: 5px;
   border: none;
-  border-radius: 6px;
-  font-size: 0.95rem;
-  font-weight: 600;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
-  z-index: 1000;
-  transition: background-color 0.2s ease;
-  width: auto;
-}
-
-.logout-btn:hover {
-  background-color: #c82333;
   cursor: pointer;
+  margin-top: 1rem;
 }
 
-/* ♿ TASTATUR: Skip-lenke for skjermlesere */
-.skip-link {
-  position: absolute;
-  top: -40px;
-  left: 0;
-  background: #000;
-  color: #fff;
-  padding: 8px;
-  z-index: 1000;
+button:hover {
+  background-color: #0056b3;
 }
 
-.skip-link:focus {
-  top: 10px;
+/* Styling for lenker i footer */
+footer p {
+  font-size: 0.9rem;
+  color: #777;
+}
+
+footer p a {
+  text-decoration: none;
+  color: #007BFF;
+}
+footer p a:hover {
+  color: #0056b3;
 }
